@@ -1,4 +1,6 @@
 import click
+import toml
+import requests
 
 config = {
     "package_name": "requests",
@@ -19,18 +21,10 @@ config = {
 @click.option('--filter', default=config['filter_substring'], help='Фильтр пакетов')
 def analyze(package, repo, mode, version, depth, filter):
     """Анализатор зависимостей пакетов"""
-
-    print(f"Анализируем пакет: {package}")
-    print(f"Репозиторий: {repo}")
-    print(f"Режим: {mode}")
-    print(f"Версия: {version}")
-    print(f"Глубина анализа: {depth}")
-    if filter:
-        print(f"Фильтр: {filter}")
+    print(f"Начало анализа пакета {package}")
 
     # Здесь будет логика анализа
     print("Анализ завершен!")
-
 
 if __name__ == '__main__':
     analyze()

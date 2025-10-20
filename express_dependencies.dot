@@ -1,0 +1,28 @@
+digraph express_dependencies {
+    rankdir=TB;
+    node [shape=box];
+    
+    "express" [style=filled, color=lightgreen];
+    "qs";
+    "express" -> "qs";
+    "etag";
+    "express" -> "etag";
+    "once";
+    "express" -> "once";
+    "send";
+    "express" -> "send";
+    "vary";
+    "express" -> "vary";
+    "debug";
+    "express" -> "debug";
+    "fresh";
+    "express" -> "fresh";
+    "cookie";
+    "express" -> "cookie";
+    "router";
+    "express" -> "router";
+    "accepts";
+    "express" -> "accepts";
+    "..." [shape=ellipse, style=dashed];
+    "express" -> "...";
+}
